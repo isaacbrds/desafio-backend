@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2022_08_10_212942) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -50,7 +53,7 @@ ActiveRecord::Schema.define(version: 2022_08_10_212942) do
     t.string "congressman_id"
     t.string "cod_document"
     t.string "url_document"
-    t.integer "invoice_id", null: false
+    t.bigint "invoice_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["invoice_id"], name: "index_documents_on_invoice_id"
@@ -61,8 +64,8 @@ ActiveRecord::Schema.define(version: 2022_08_10_212942) do
     t.text "description"
     t.string "num_specification_sub_quota"
     t.string "description_specification"
-    t.integer "supplier_id", null: false
-    t.integer "congressman_id", null: false
+    t.bigint "supplier_id", null: false
+    t.bigint "congressman_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["congressman_id"], name: "index_expenses_on_congressman_id"
@@ -84,7 +87,7 @@ ActiveRecord::Schema.define(version: 2022_08_10_212942) do
     t.string "patch"
     t.string "refund"
     t.string "restitution"
-    t.integer "expense_id", null: false
+    t.bigint "expense_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["expense_id"], name: "index_invoices_on_expense_id"
