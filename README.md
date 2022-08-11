@@ -55,4 +55,5 @@ Bom trabalho!
 - Utilizei o bootrap para dar uma aparência melhor ao aplicativo
 - Utilizei o google chart para gerar os gráficos de gastos do Deputado
 - Testei algumas funcionalidades do projeto apenas para demonstrar o uso do rspec, se fosse uma aplicação real tudo ou praticamente tudo teria que ser testado
+- Configurei o Heroku para salvar os arquivos no S3 da AWS
 
