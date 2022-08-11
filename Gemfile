@@ -7,8 +7,6 @@ ruby '3.0.0'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use pg as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-
-gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -25,6 +23,7 @@ gem 'kaminari'
 gem 'devise'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.7'
+gem "aws-sdk-s3", require: false
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
