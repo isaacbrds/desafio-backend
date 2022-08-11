@@ -45,3 +45,14 @@ O desafio deve ser entregue nos passando a URL de seu repositório. Fique a vont
 Qualquer dúvida em relação ao desafio, responderemos por e-mail.
 
 Bom trabalho!
+
+#Trechos alterados
+- A aplicação está hospedada no Heroku no seguinte endereço: https://desafio-backend-agenda.herokuapp.com/ 
+- Utilizei um worker junto ao sidekiq e ao redis para fazer a importação das tabelas
+- Traduzei algumas partes do sistema utilizando o locale do próprio Rails
+- Tive que atualizar o ruby pois a versão 2.6.5 não é mais suportada pelo Heroku
+- Há como acessar a interface de gerenciamento do sidekiq porém está com uma senha por razões de segurança
+- Utilizei o bootrap para dar uma aparência melhor ao aplicativo
+- Utilizei o google chart para gerar os gráficos de gastos do Deputado
+- Testei algumas funcionalidades do projeto apenas para demonstrar o uso do rspec, se fosse uma aplicação real tudo ou praticamente tudo teria que ser testado
+
