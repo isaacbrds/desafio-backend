@@ -12,8 +12,9 @@ class CongressmenController < ApplicationController
 
   def destroy
     @congressman.destroy
-    Supplier.destroy_all
     respond_to do |format|
+      sleep(20.seconds)
+      Supplier.destroy_all
       format.html { redirect_to congressmen_url, notice: "congressman was successfully destroyed." }
     end
   end
