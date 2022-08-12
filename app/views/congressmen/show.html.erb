@@ -2,8 +2,10 @@
 
   <div class="container">
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="72">
-      
+      <% if @congressman.avatar.attached? %>
+        <%= image_tag @congressman.avatar.variant(resize_to_fit: [100,100]), class: "d-block mx-auto mb-4"   %> 
+      <% end %>
+    
       <h2>Informações do Candidato</h2>
       <p class="lead"></p>
     </div>
