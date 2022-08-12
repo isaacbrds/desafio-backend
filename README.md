@@ -57,3 +57,16 @@ Bom trabalho!
 - Testei algumas funcionalidades do projeto apenas para demonstrar o uso do rspec, se fosse uma aplicação real tudo ou praticamente tudo teria que ser testado
 - Configurei o Heroku para salvar os arquivos no S3 da AWS
 
+#Tecnologias Utilizadas
+- Ruby 3.0.0
+- Rails 6.0.5
+- Postgresql 12
+- Sidekiq 6.4
+- Redis 4.0
+- RSpec 5.0
+- FactoryBot 6.2
+- Faker 2.22
+- Kaminari 4.0
+- AWS S3
+- Bootstrap 5.0
+
