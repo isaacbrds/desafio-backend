@@ -16,8 +16,8 @@ class UploadWorker
 
         next if row[5] != 'CE'
 
-        create_congressman(row[0..8]) unless Congressman.where(cpf: row[1]).exists?
-        create_supplier(row[12..13]) unless Supplier.where(cpf_cnpj: row[13]).exists?
+        create_congressman(row[0..8]) unless Congressman.from_cpf(row[1]).exists?
+        create_supplier(row[12..13]) unless Supplier.from_cpf_cnpj(row[13]).exists?
         response_expense_id = create_expense(row[8], row[9], row[10], row[11], row[13], row[1])
         response_invoice_id = create_invoice(row[14..27], response_expense_id)
         create_document(row[28..30], response_invoice_id)
